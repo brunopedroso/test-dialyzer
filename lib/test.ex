@@ -7,19 +7,13 @@ defmodule Test do
   def hello(param) do
     function1(param)
     function2(param)
+    ""
   end
 
   @spec function1(String.t()) :: String.t()
-  def function1(param) do
-    IO.puts(param)
-    "ok"
-  end
+  def function1(_), do: "ok"
 
-  @spec function2(String.t()) :: String.t()
-  def function2(nil), do: "nil"
+  defp function2(nil), do: "nil"
 
-  def function2(param) do
-    IO.puts(param)
-    "ok"
-  end
+  defp function2(_), do: "ok"
 end
